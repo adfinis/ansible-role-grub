@@ -1,6 +1,6 @@
-=============
+==========
 ROLE GRUB
-=============
+==========
 
 .. image:: https://img.shields.io/github/license/adfinis-sygroup/ansible-role-grub.svg?style=flat-square
   :target: https://github.com/adfinis-sygroup/ansible-role-grub/blob/master/LICENSE
@@ -65,3 +65,4 @@ Author Information
 grub role was written by:
 
 * Adfinis SyGroup AG | `Website <https://www.adfinis-sygroup.ch/>`_ | `Twitter <https://twitter.com/adfinissygroup>`_ | `GitHub <https://github.com/adfinis-sygroup>`_
+
