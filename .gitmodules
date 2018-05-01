@@ -1,3 +1,0 @@
-[submodule ".testenv/lint-rules"]
-	path = .testenv/lint-rules
-	url = https://github.com/adfinis-sygroup/ansible-lint-rules.git
