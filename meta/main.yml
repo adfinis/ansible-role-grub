@@ -3,6 +3,7 @@
 dependencies: []
 
 galaxy_info:
+  role_name: grub
   author: 'Adfinis SyGroup AG'
   description: 'Install and manage grub2'
   company: 'Adfinis SyGroup AG'
