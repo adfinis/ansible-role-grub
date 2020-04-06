@@ -26,8 +26,7 @@ GRUB_CMDLINE_LINUX_DEFAULT="{{ grub_console }}"
 {% endif %}
 GRUB_CMDLINE_LINUX="{{ grub_cmdline_linux | join(' ') }}"
 {% if grub_serial | d(False) %}
-GRUB_SERIAL_COMMAND="serial --speed={{ grub_serial.speed }} --unit={{ grub_serial.unit }} --word={{ grub_serial.word }} --pari
-ty={{ grub_serial.parity }} --stop={{ grub_serial.stop }}"
+GRUB_SERIAL_COMMAND="serial --speed={{ grub_serial.speed }} --unit={{ grub_serial.unit }} --word={{ grub_serial.word }} --parity={{ grub_serial.parity }} --stop={{ grub_serial.stop }}"
 {% endif %}
 
 # disable graphical terminal (grub-pc only)
