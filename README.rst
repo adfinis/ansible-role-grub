@@ -25,11 +25,63 @@ may be a good idea to mention in this section that the boto package is required.
 Role Variables
 ===============
 
-A description of the settable variables for this role should go here, including
-any variables that are in defaults/main.yml, vars/main.yml, and any variables
-that can/should be set via parameters to the role. Any variables that are read
-from other roles and/or the global scope (ie. hostvars, group vars, etc.)
-should be mentioned here as well.
+start grub and linux on these consoles
+
+.. code-block:: YAML
+
+   grub_consoles:
+     - tty0
+     - 'ttyS0,{{ grub_serial.speed }}'
+
+grub serial command settings
+
+.. code-block:: YAML
+
+   grub_serial:
+     speed: 115200
+     unit: 0
+     word: 8
+     parity: 0
+     stop: 1
+
+grub timeout (in seconds)
+
+.. code-block:: YAML
+
+   grub_timeout: 5
+
+disable predictable network interface names
+
+.. code-block:: YAML
+
+   grub_disable_network_predictable_interface_names: True
+
+additional cmdline arguments
+type: list
+
+.. code-block:: YAML
+
+   grub_cmdline_linux_list: []
+
+additional cmdline default arguemnts
+type: list
+
+.. code-block:: YAML
+
+   grub_cmdline_linux_default_list: [ ]
+
+An example how to add additional parameters to the kernel:
+
+.. code-block:: YAML
+
+  grub_cmdline_linux_list:
+    - ip=192.0.2.2::192.0.2.1:255.255.255.0:host.example.com:eth0:off
+    - vnc
+    - vncpassword=password
+
+  grub_cmdline_linux_default_list:
+    - transparent_hugepage=never
+    - numa=off
 
 
 Dependencies

@@ -23,6 +23,10 @@ grub_disable_network_predictable_interface_names: True
 # type: list
 grub_cmdline_linux_list: []
 
+# additional cmdline default arguments
+# type: list
+grub_cmdline_linux_default_list: []
+
 # An example how to add additional parameters to the kernel:
 #
 # .. code-block:: YAML
@@ -31,3 +35,7 @@ grub_cmdline_linux_list: []
 #     - ip=192.0.2.2::192.0.2.1:255.255.255.0:host.example.com:eth0:off
 #     - vnc
 #     - vncpassword=password
+#
+#   grub_cmdline_linux_default_list:
+#     - transparent_hugepage=never
+#     - numa=off
