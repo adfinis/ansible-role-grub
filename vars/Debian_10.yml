@@ -1,0 +1,21 @@
+---
+
+# grub related packages
+grub_packages:
+  - grub2
+
+# grub unwanted packages
+grub_packages_removed:
+  - os-prober
+
+# grub-mkconfig binary
+grub_mkconfig_bin: /usr/sbin/grub-mkconfig
+
+# grub configuration file
+grub_cfg: /etc/default/grub
+
+# grub main running configuration
+grub_boot_cfg: /boot/grub/grub.cfg
+
+# Use predictiable ifnames, because disabling is not supported anymore in Buster
+grub_disable_network_predictable_interface_names: False
