@@ -5,6 +5,8 @@ grub_consoles:
   - tty0
   - 'ttyS0,{{ grub_serial.speed }}'
 
+grub_serial_enabled: True
+
 # grub serial command settings
 grub_serial:
   speed: 115200
